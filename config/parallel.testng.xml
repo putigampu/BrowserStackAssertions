@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel" thread-count="4" parallel="tests">
-    <test name="SingleTestChrome">
+    <test name="BrowserStackTestParallelChrome">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="chrome"/>
         <classes>
-            <class name="com.browserstack.SingleTest"/>
+            <class name="com.browserstack.BrowserStackTestParallel"/>
         </classes>
     </test>
 
-    <test name="SingleTestFirefox">
+    <test name="BrowserStackTestParallelFirefox">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="firefox"/>
         <classes>
-            <class name="com.browserstack.SingleTest"/>
+            <class name="com.browserstack.BrowserStackTestParallel"/>
         </classes>
     </test>
 
-    <test name="SingleTestSafari">
+    <test name="BrowserStackTestParallelSafari">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="safari"/>
         <classes>
-            <class name="com.browserstack.SingleTest"/>
+            <class name="com.browserstack.BrowserStackTestParallel"/>
         </classes>
     </test>
 
-    <test name="SingleTestIE">
+    <test name="BrowserStackTestParallelIE">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="ie"/>
         <classes>
-            <class name="com.browserstack.SingleTest"/>
+            <class name="com.browserstack.BrowserStackTestParallel"/>
+        </classes>
+    </test>
+    <test name="BrowserStackTestParallelOpera">
+        <parameter name="config" value="parallel.conf.json"/>
+        <parameter name="environment" value="opera"/>
+        <classes>
+            <class name="com.browserstack.BrowserStackTestParallel"/>
         </classes>
     </test>
 </suite>
