@@ -1,2 +1,2 @@
-# sreedevi.putigampu-gmail.com
+# Assertions Testing Technique through Browserstack
 SreeBrowserStack
