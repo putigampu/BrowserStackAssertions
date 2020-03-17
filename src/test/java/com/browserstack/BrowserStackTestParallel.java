@@ -12,6 +12,7 @@ public class BrowserStackTestParallel extends BrowserStackTestNGTest {
     @Test
     public void AssertionsTest() throws Exception {
         driver.get("https://www.macys.com/");
+        Thread.sleep(5000);
         WebElement element = driver.findElement(By.id("logo"));
         Assert.assertTrue(element.isDisplayed());
 
