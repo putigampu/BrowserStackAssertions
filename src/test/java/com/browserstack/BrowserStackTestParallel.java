@@ -13,8 +13,16 @@ public class BrowserStackTestParallel extends BrowserStackTestNGTest {
     public void AssertionsTest() throws Exception {
         driver.get("https://www.macys.com/");
         Thread.sleep(5000);
-        WebElement element = driver.findElement(By.id("logo"));
-        Assert.assertTrue(element.isDisplayed());
+        String Expected = "Macy's - Shop Fashion Clothing & Accessories - Official Site - Macys.com";
+        String Actual = driver.getTitle();
+        //Assertion1 for a page Title
+        Assert.assertEquals(Actual,Expected);
+        WebElement ListHeader = driver.findElement(By.id("header-wishlist-label"));
+        //Assertion2 for a 'LIST' on header
+        Assert.assertTrue(ListHeader.isDisplayed());
+        WebElement SignIn = driver.findElement(By.id("myRewardsLabel-status"));
+        //Assertion3 for a 'Sign-in' on Header
+        Assert.assertTrue(SignIn.isDisplayed());
 
     }
 
