@@ -4,8 +4,8 @@
   "key": "qWe6w5Vx12v2weXJczSp",
 
   "capabilities": {
-    "build": "testng-browserstack",
-    "name": "parallel_test",
+    "build": "BrowserstackAssertions",
+    "name": "BrowserStackParallel",
     "browserstack.debug": true
   },
 
@@ -16,15 +16,14 @@
     "firefox": {
       "browser": "firefox"
     },
-    "opera": {
-      "browser": "opera"
-    },
     "safari": {
-      "os": "OS X",
       "browser": "safari"
     },
     "ie": {
       "browser": "internet explorer"
+    },
+    "edge": {
+      "browser": "edge"
     }
   }
 }
