@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parallel" thread-count="4" parallel="tests">
-    <test name="BrowserStackTestParallelChrome">
+<suite name="BrowserStackParallel" thread-count="5" parallel="tests">
+    <test name="SingleTestChrome">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="chrome"/>
         <classes>
             <class name="com.browserstack.BrowserStackTestParallel"/>
         </classes>
     </test>
-
-    <test name="BrowserStackTestParallelFirefox">
+    <test name="SingleTestEdge">
+        <parameter name="config" value="parallel.conf.json"/>
+        <parameter name="environment" value="edge"/>
+        <classes>
+            <class name="com.browserstack.BrowserStackTestParallel"/>
+        </classes>
+    </test>
+    <test name="SingleTestFirefox">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="firefox"/>
         <classes>
@@ -17,7 +23,7 @@
         </classes>
     </test>
 
-    <test name="BrowserStackTestParallelSafari">
+    <test name="SingleTestSafari">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="safari"/>
         <classes>
@@ -25,16 +31,9 @@
         </classes>
     </test>
 
-    <test name="BrowserStackTestParallelIE">
+    <test name="SingleTestIE">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="ie"/>
-        <classes>
-            <class name="com.browserstack.BrowserStackTestParallel"/>
-        </classes>
-    </test>
-    <test name="BrowserStackTestParallelOpera">
-        <parameter name="config" value="parallel.conf.json"/>
-        <parameter name="environment" value="opera"/>
         <classes>
             <class name="com.browserstack.BrowserStackTestParallel"/>
         </classes>
